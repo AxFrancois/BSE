@@ -15,5 +15,12 @@
 void Config_INT7 (void);
 void Config_INT6 (void);
 void Config_Timer2_TimeBase(void);
-
+void Modif_Cfg_Globale (void);
+void Oscillator_Init();
+void Config_Timer4_Event_Counter(void);
+void CFG_Clock_UART0(void);
+void CFG_UART0(void);
+char getkey_one_time(void);
+char Putchar(char c);
+void plusUn(char *buf);
 #endif

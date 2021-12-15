@@ -14,6 +14,7 @@
 
 void Config_INT7 (void);
 void Config_INT6 (void);
-void Config_TIMER2(void);
-
+void Config_Timer2_TimeBase(void);
+void Modif_Cfg_Globale (void);
+void Config_Timer4_TimeBase(void);
 #endif

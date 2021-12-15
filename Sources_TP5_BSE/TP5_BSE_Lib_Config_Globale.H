@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------------
 ;
-; 	FILE NAME  	: TP2_BSE_Main.H
+; 	FILE NAME  	: TP2_Lib_Config_Globale_8051F020.H
 ; 	TARGET MCUs	: C8051F020, 
 ; 	DESCRIPTION	: Configuration pour le TP BSE
 ;
@@ -8,12 +8,13 @@
 ;
 ;---------------------------------------------------------------------------*/
 
-#ifndef __TP2_BSE_Main__
-#define __TP2_BSE_Main__
+#ifndef __TP2_Lib_Config_Globale_8051F020__
+#define __TP2_Lib_Config_Globale_8051F020__
 
 
-void Config_INT7 (void);
-void Config_INT6 (void);
-void Config_TIMER2(void);
+void Init_Device (void);
+void Reset_Sources_Init();
+void Port_IO_Init();
+void Oscillator_Init_Osc_Quartz();
 
 #endif
