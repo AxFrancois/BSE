@@ -22,9 +22,6 @@
 
 sbit LED = P1^6;  // LED
 sbit BP = P3^7; //Bouton poussoir
-sbit VISU_INT7_START = P2^0;
-sbit VISU_INT7_END = P6^0;
-sbit VISU_INT7_WIDTH = P6^1;
 int ACK_BP = BP_OFF;
 
 typedef enum{
@@ -41,22 +38,10 @@ State ETAT_LED = clignotement;
 //-----------------------------------------------------------------------------
 // MAIN Routine
 //-----------------------------------------------------------------------------
-
-void IE7_ISR (void) interrupt 19{
-	VISU_INT7_START = 1;
-	VISU_INT7_START = 0;
-	VISU_INT7_WIDTH = 1;
-	ETAT_LED = !ETAT_LED;
-	P3IF &= (0<<7);	 
-	VISU_INT7_END = 1;
-	VISU_INT7_END = 0;
-}
-
 void main (void) {
 	
-				EA=0;
 	      Init_Device();
-				Port_INT_Init();
+	
         while(1)
         {  
 					if(ETAT_LED == clignotement)
@@ -70,9 +55,21 @@ void main (void) {
 					{
 						LED = LED_OFF;
 					}
+				 if(BP == BP_ON && ACK_BP == BP_OFF)
+				 {
+					 ACK_BP = BP_ON;
+					 if(ETAT_LED == clignotement)
+					 {
+						 ETAT_LED = eteinte;
+					 }else
+					 {
+						 ETAT_LED = clignotement;
+					 }
+				 }
+				 else if(BP == BP_OFF)
+				 {
+					 ACK_BP = BP_OFF;
+				 }
         }						               	
 			}
-
-
-
 //*****************************************************************************	 

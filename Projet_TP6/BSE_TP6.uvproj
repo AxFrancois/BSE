@@ -46,7 +46,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>BSE_TP5</OutputName>
+          <OutputName>BSE_TP6</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -177,7 +177,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2></Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -356,8 +356,8 @@
             <UserClasses></UserClasses>
             <CSection></CSection>
             <UserSection></UserSection>
-            <CodeBaseAddress></CodeBaseAddress>
-            <XDataBaseAddress></XDataBaseAddress>
+            <CodeBaseAddress>0X0000-0XFFFF</CodeBaseAddress>
+            <XDataBaseAddress>0X0000-0X0FFF</XDataBaseAddress>
             <PDataBaseAddress></PDataBaseAddress>
             <BitBaseAddress></BitBaseAddress>
             <DataBaseAddress></DataBaseAddress>
@@ -435,29 +435,24 @@
               <FilePath>.\STARTUP.A51</FilePath>
             </File>
             <File>
-              <FileName>TP5_BSE_Lib_Timers_UART.c</FileName>
+              <FileName>TP6_BSE_Lib_Config_Globale.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\TP5_BSE_Lib_Timers_UART.c</FilePath>
+              <FilePath>.\TP6_BSE_Lib_Config_Globale.c</FilePath>
             </File>
             <File>
-              <FileName>TP5_BSE_Lib_Config_Globale.c</FileName>
+              <FileName>TP6_BSE_Lib_Divers.C</FileName>
               <FileType>1</FileType>
-              <FilePath>.\TP5_BSE_Lib_Config_Globale.c</FilePath>
+              <FilePath>.\TP6_BSE_Lib_Divers.C</FilePath>
             </File>
             <File>
-              <FileName>TP5_BSE_Lib_Divers.C</FileName>
+              <FileName>TP6_BSE_Lib_INT_EXT.C</FileName>
               <FileType>1</FileType>
-              <FilePath>.\TP5_BSE_Lib_Divers.C</FilePath>
+              <FilePath>.\TP6_BSE_Lib_INT_EXT.C</FilePath>
             </File>
             <File>
-              <FileName>TP5_BSE_Lib_INT_EXT.C</FileName>
+              <FileName>TP6_BSE_Main.C</FileName>
               <FileType>1</FileType>
-              <FilePath>.\TP5_BSE_Lib_INT_EXT.C</FilePath>
-            </File>
-            <File>
-              <FileName>TP5_BSE_Main.C</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TP5_BSE_Main.C</FilePath>
+              <FilePath>.\TP6_BSE_Main.C</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -500,10 +495,91 @@
                 </File51>
               </FileOption>
             </File>
+            <File>
+              <FileName>TP6_BSE_Lib_ADC-DAC-VREF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TP6_BSE_Lib_ADC-DAC-VREF.c</FilePath>
+            </File>
+            <File>
+              <FileName>TP6_BSE_Lib_Cde_Servo.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TP6_BSE_Lib_Cde_Servo.C</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>2</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                  <BankNo>65535</BankNo>
+                </CommonProperty>
+                <File51>
+                  <C51>
+                    <RegisterColoring>2</RegisterColoring>
+                    <VariablesInOrder>2</VariablesInOrder>
+                    <IntegerPromotion>2</IntegerPromotion>
+                    <uAregs>2</uAregs>
+                    <UseInterruptVector>2</UseInterruptVector>
+                    <Fuzzy>8</Fuzzy>
+                    <Optimize>10</Optimize>
+                    <WarningLevel>2</WarningLevel>
+                    <SizeSpeed>2</SizeSpeed>
+                    <ObjectExtend>2</ObjectExtend>
+                    <ACallAJmp>2</ACallAJmp>
+                    <InterruptVectorAddress>0</InterruptVectorAddress>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </C51>
+                </File51>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>TP6_BSE_Lib_UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TP6_BSE_Lib_UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>TP6_BSE_Lib_TimeBase.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TP6_BSE_Lib_TimeBase.C</FilePath>
+            </File>
+            <File>
+              <FileName>TP6_BSE_Lib_Frequencemetre.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TP6_BSE_Lib_Frequencemetre.C</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
     </Target>
   </Targets>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

@@ -49,25 +49,13 @@ void Port_IO_Init()
 	  P1MDOUT |= (1<<6);  // P1.6  en Push Pull
 		P3MDOUT &= (0<<7);  // P3.7  en drain ouvert
 		P3 |= (1<<7);
-		P2MDOUT|= (1<<0);
-	
-		P74OUT = 0xFF; 
-		P6 =0x00;  
-	
-		
 // La configuration qui suit n'a qu'un intêret pédagogique...	
 	 //P3 = 0;
 	  //P3MDOUT = 0xFF;
 // Fin de la config à intêret pédagogique
 }
 
-void Port_INT_Init(){
-		EIE2 |= (1<<5);
-		EIP2 |= (1<<5);
-		P3IF &= (0<<3);
-		XBR1 |= (1<<4);
-		IE |= (1<<7);
-}
+
 
 //-----------------------------------------------------------------------------
 // Initialisation globale du Microcontrôleur - 
